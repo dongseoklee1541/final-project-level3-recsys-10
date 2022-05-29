@@ -1,7 +1,19 @@
 # PROJECT-CUSTOMIZED
 */data
 data/
+*/SLIM
+db_config.yaml
 
+
+# data
+*.json
+*.csv
+/data
+
+# file
+.ipynb_checkpoints
+.empty
+*.pt
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,linux,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,linux,macos,windows
@@ -56,10 +68,10 @@ Temporary Items
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
+*.pyc
 __pycache__/
 *.py[cod]
 *$py.class
-
 # C extensions
 *.so
 
