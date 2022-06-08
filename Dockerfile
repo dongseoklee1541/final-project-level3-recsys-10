@@ -12,6 +12,6 @@ RUN pip install --upgrade pip \
 WORKDIR /beerrecsys
 
 
-EXPOSE 8001
+EXPOSE 8501
 CMD ["sh", "start.sh"]
 # CMD ["python", "-m", "backend.app"]
