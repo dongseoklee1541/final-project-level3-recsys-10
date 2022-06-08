@@ -1,7 +1,6 @@
 # pull base image
 FROM python:3.8.5-slim-buster
 
-COPY start.sh /beerrecsys/start.sh
 COPY /backend /beerrecsys/backend
 COPY /frontend /beerrecsys/frontend
 COPY requirements.txt /beerrecsys/requirements.txt
