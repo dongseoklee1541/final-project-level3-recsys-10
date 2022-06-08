@@ -49,6 +49,3 @@ jobs:
           gcloud compute instances update-container "$GCE_INSTANCE" \
             --zone "$GCE_INSTANCE_ZONE" \
             --container-image "gcr.io/$PROJECT_ID/$DOCKER_IMAGE_NAME:$GITHUB_SHA"
-
-
-
