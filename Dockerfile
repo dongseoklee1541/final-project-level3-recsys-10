@@ -11,5 +11,5 @@ RUN pip install --upgrade pip \
 WORKDIR /beerrecsys
 
 
-EXPOSE 8501
+EXPOSE 30002
 CMD ["sh", "start.sh"]
