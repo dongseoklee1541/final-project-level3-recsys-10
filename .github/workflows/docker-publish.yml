@@ -34,7 +34,7 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
       
       - name: Make start.sh
-        run : echo "$DRIVE_URL" >> start.sh
+        run : echo "wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=$DRIVE_URL' -O $DRIVE_FILENAME" >> start.sh
       - name: What
         run : echo "unzip -o $DRIVE_FILENAME" >> start.sh
       - name: Gogogo
