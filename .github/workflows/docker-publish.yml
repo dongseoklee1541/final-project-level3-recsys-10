@@ -13,6 +13,8 @@ env:
   DOCKER_IMAGE_NAME: beerrecsys-deploy
   GCE_INSTANCE: ${{ secrets.GCE_INSTANCE }}
   GCE_INSTANCE_ZONE: ${{ secrets.GCE_INSTANCE_ZONE }}
+  DRIVE_URL: ${{ secrets.DRIVE_URL }}
+  DRIVE_FILENAME : ${{ secrets.DRIVE_FILENAME }}
 
 
 jobs:
@@ -30,7 +32,14 @@ jobs:
           version: '290.0.1'
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
           project_id: ${{ secrets.GCP_PROJECT_ID }}
-          
+      
+      - name: Make start.sh
+        run : echo "$DRIVE_URL" >> start.sh
+      - name: What
+        run : echo "unzip -o $DRIVE_FILENAME" >> start.sh
+      - name: Gogogo
+        run : echo "python -m backend.app" >> start.sh
+      
           # gcloud에서 Docker 사용할 수 있도록 설정
       - run: |-
           gcloud --quiet auth configure-docker
